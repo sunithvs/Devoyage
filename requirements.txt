@@ -1,5 +1,5 @@
 asgiref==3.5.2
-backports.zoneinfo==0.2.1
+# backports.zoneinfo==0.2.1
 certifi==2022.12.7
 cffi==1.15.1
 charset-normalizer==2.1.1
@@ -8,7 +8,7 @@ coreschema==0.0.4
 cryptography==38.0.4
 defusedxml==0.7.1
 Django==4.1.4
-django-allauth==0.51.0
+
 django-filter==22.1
 django-jazzmin==2.6.0
 djangorestframework==3.14.0
@@ -33,4 +33,3 @@ ruamel.yaml==0.17.21
 ruamel.yaml.clib==0.2.7
 sqlparse==0.4.3
 uritemplate==4.1.1
-urllib3==1.26.13
