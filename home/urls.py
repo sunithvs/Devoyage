@@ -20,7 +20,7 @@ from home import views
 
 router = routers.DefaultRouter()
 
-
+router.register("university", views.UniversityViewSet)
 urlpatterns = [
 
     path("", include(router.urls)),
