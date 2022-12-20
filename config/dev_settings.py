@@ -44,6 +44,7 @@ INSTALLED_APPS = [
 
     # local apps
     "home",
+    "auth_login",
 
 ]
 
@@ -128,6 +129,8 @@ MEDIA_URL = '/media/'
 STATICFILES_DIRS = [
     BASE_DIR / "static",
 ]
+# specify custom user model\
+AUTH_USER_MODEL = "auth_login.User"
 
 MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
