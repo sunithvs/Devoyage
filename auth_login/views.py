@@ -3,7 +3,7 @@ from rest_framework import generics
 from rest_framework import permissions
 from rest_framework.response import Response
 # from knox.models import AuthToken
-from .serializers import UserSerializer, RegisterSerializer, LoginSerializer
+from .serializers import UserSerializer, RegisterSerializer
 from rest_framework_simplejwt.models import TokenUser
 
 
