@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 ]
 
-APPLICATION_NAME = "trebuchet"
+APPLICATION_NAME = "devoyage"
 ADMIN_URL = "admin/"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
