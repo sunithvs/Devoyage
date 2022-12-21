@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     # local apps
     "university",
     "auth_login",
+    "session",
 
 ]
 
