@@ -50,7 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # local apps
-    "home",
+    "university",
 
 ]
 
@@ -257,7 +257,7 @@ JAZZMIN_SETTINGS = {
         {"name": "logs", "url": f"/{ADMIN_URL}log_viewer/"},
         {"name": "requests", "url": f"/{ADMIN_URL}request-viewer/"},
         # App with dropdown menu to all its models pages (Permissions checked against models)
-        {"app": "home"},
+        {"app": "university"},
     ],
 
     #############

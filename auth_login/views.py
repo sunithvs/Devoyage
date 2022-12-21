@@ -1,5 +1,5 @@
 # views.py
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework import permissions
 from rest_framework.response import Response
 # from knox.models import AuthToken
@@ -30,3 +30,12 @@ class UserAPI(generics.RetrieveAPIView):
 
     def get_object(self):
         return self.request.user
+
+
+#  logout API
+class LogoutView(generics.GenericAPIView):
+
+    def post(self, request, *args, **kwargs):
+        # simply delete the token to force a login
+        request.user.auth_token.delete()
+        return Response(status=status.HTTP_200_OK)

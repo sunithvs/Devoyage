@@ -1,9 +1,9 @@
-# home/serializers
-# serializers of home app
+# university/serializers
+# serializers of university app
 from rest_framework import serializers
 
-# import models of home app
-from home.models import University, Feedback, Course, Image, Gallery
+# import models of university app
+from university.models import University, Feedback, Course, Image, Gallery
 
 
 #  feedback Serializer

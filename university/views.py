@@ -5,8 +5,8 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.decorators import action
 from rest_framework.response import Response
 
-from home.models import University, Feedback, Course, Gallery
-from home.serializer import UniversitySerializer, FeedbackSerializer, CourseSerializer, GallerySerializer
+from university.models import University, Feedback, Course, Gallery
+from university.serializer import UniversitySerializer, FeedbackSerializer, CourseSerializer, GallerySerializer
 
 
 class UniversityViewSet(viewsets.ModelViewSet):
