@@ -35,11 +35,6 @@ INSTALLED_APPS = [
     "jazzmin",
     "rest_framework",
     'drf_yasg',  # swagger ui
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
 
     # django apps
     'django.contrib.admin',
@@ -51,10 +46,11 @@ INSTALLED_APPS = [
 
     # local apps
     "university",
+    "auth_login",
 
 ]
 
-APPLICATION_NAME = "trebuchet"
+APPLICATION_NAME = "Devoyage"
 ADMIN_URL = "admin/"
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -169,9 +165,7 @@ REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 100,
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        # 'oauth2_provider.contrib.rest_framework.OAuth2Authentication',
-        # 'rest_framework_social_oauth2.authentication.SocialAuthentication',
-        'rest_framework.authentication.SessionAuthentication'
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     ],
     'DEFAULT_THROTTLE_CLASSES': [
         'rest_framework.throttling.AnonRateThrottle',

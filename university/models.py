@@ -48,9 +48,9 @@ class University(models.Model):
     affiliations = models.CharField(max_length=100)
     # TODO: make this array field
     facilities = models.CharField(max_length=100)
-    feedbacks = models.ManyToManyField(Feedback, related_name='feedbacks', blank=True, null=True)
-    courses = models.ManyToManyField(Course, related_name='courses', blank=True, null=True)
-    gallery = models.ManyToManyField(Gallery, related_name='gallery', blank=True, null=True)
+    feedbacks = models.ManyToManyField(Feedback, related_name='feedbacks', blank=True,)
+    courses = models.ManyToManyField(Course, related_name='courses', blank=True,)
+    gallery = models.ManyToManyField(Gallery, related_name='gallery', blank=True,)
 
     def __str__(self):
         return self.name
