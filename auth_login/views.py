@@ -34,6 +34,8 @@ class UserAPI(generics.RetrieveAPIView):
 
 #  logout API
 class LogoutView(generics.GenericAPIView):
+    permission_classes = [permissions.IsAuthenticated, ]
+    serializer_class = UserSerializer
 
     def post(self, request, *args, **kwargs):
         # simply delete the token to force a login

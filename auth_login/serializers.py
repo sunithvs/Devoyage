@@ -9,7 +9,7 @@ from rest_framework.authtoken.models import Token
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ('id', 'username', 'email')
+        fields = ('id', 'username', 'email', "mobile")
 
 
 class RegisterSerializer(serializers.ModelSerializer):

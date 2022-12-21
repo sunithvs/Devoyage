@@ -1,5 +1,4 @@
-# university/serializers
-# serializers of university app
+
 from rest_framework import serializers
 
 # import models of university app
@@ -8,12 +7,20 @@ from university.models import University, Feedback, Course, Image, Gallery
 
 #  feedback Serializer
 class FeedbackSerializer(serializers.ModelSerializer):
-    def get_user(self, obj):
-        return obj.user.first_name + " " + obj.user.last_name
-
     class Meta:
         model = Feedback
+        create_fields = ('user', 'heading', 'message')
         fields = ['user', 'heading', 'message', 'date']
+        extra_kwargs = {
+            'user': {'read_only': True},
+            'university': {'read_only': True},
+            'created_at': {'read_only': True}
+        }
+
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['user'] = instance.user.username
+        return representation
 
 
 class ImageSerializer(serializers.ModelSerializer):
@@ -47,3 +54,6 @@ class UniversitySerializer(serializers.ModelSerializer):
         fields = (
             'id', 'name', 'description', 'nirf_rank', 'n_u_p', 'affiliations', 'facilities',
             'feedbacks', 'courses', 'gallery')
+        extra_kwargs = {
+            'id': {'read_only': True},
+        }
