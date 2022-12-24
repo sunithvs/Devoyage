@@ -25,9 +25,10 @@ SECRET_KEY = 'django-insecure-cag@!muz(kv)t31hxk6w3b)^vzt62_n1wo8&@89)ueefs6p4-7
 DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
-cors_allowed_origins = ["https://localhost:8000", "https://devoyage.sunithvs.com", "https://trebuchet.one"]
+cors_allowed_origins = ["https://localhost:8000", "https://devoyage.sunithvs.com", "http://localhost:3000"]
 # Application definition
-CSRF_TRUSTED_ORIGINS = ["https://localhost:8000", "https://devoyage.sunithvs.com", "https://trebuchet.one"]
+CSRF_TRUSTED_ORIGINS = ["https://localhost:8000", "https://devoyage.sunithvs.com",
+                        "http://localhost:3000"]
 INSTALLED_APPS = [
     # third party apps
     "jazzmin",
